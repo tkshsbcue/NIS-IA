@@ -45,9 +45,9 @@ export function CodeEditor() {
   }, [level, setEditorCode, addConsoleMessage]);
 
   return (
-    <div className="flex flex-1 flex-col overflow-hidden">
+    <div data-tour="editor" className="flex flex-1 flex-col overflow-hidden">
       {/* Toolbar */}
-      <div className="flex items-center justify-between border-b border-border bg-bg-secondary px-3 py-2">
+      <div data-tour="editor-toolbar" className="flex items-center justify-between border-b border-border bg-bg-secondary px-3 py-2">
         <div className="flex items-center gap-2">
           <Button size="sm" onClick={handleCompile}>
             <Play className="h-3.5 w-3.5" />

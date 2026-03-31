@@ -17,8 +17,8 @@ export function Sidebar() {
   const completedCount = Object.values(progress).filter((p) => p.completed).length;
 
   return (
-    <aside className="flex w-72 flex-col border-r border-border bg-bg-secondary">
-      <div className="border-b border-border p-4">
+    <aside data-tour="sidebar" className="flex w-72 flex-col border-r border-border bg-bg-secondary">
+      <div data-tour="progress" className="border-b border-border p-4">
         <div className="text-xs font-medium uppercase tracking-wider text-text-muted">
           Progress
         </div>

@@ -1,6 +1,7 @@
 import { Shield } from 'lucide-react';
 import { Badge } from '@/components/ui/Badge';
 import { WalletConnect } from '@/components/wallet/WalletConnect';
+import { DemoTour } from '@/components/demo/DemoTour';
 import { useStore } from '@/store';
 
 const SEPOLIA_CHAIN_ID = 11155111;
@@ -10,7 +11,7 @@ export function Header() {
   const isSepolia = walletState.chainId === SEPOLIA_CHAIN_ID;
 
   return (
-    <header className="flex h-14 items-center justify-between border-b border-border bg-bg-secondary px-4">
+    <header data-tour="header" className="flex h-14 items-center justify-between border-b border-border bg-bg-secondary px-4">
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-2 text-accent">
           <Shield className="h-5 w-5" />
@@ -21,12 +22,15 @@ export function Header() {
       </div>
 
       <div className="flex items-center gap-3">
+        <DemoTour />
         {walletState.connected && (
           <Badge variant={isSepolia ? 'success' : 'danger'}>
             {isSepolia ? 'Sepolia' : 'Wrong Network'}
           </Badge>
         )}
-        <WalletConnect />
+        <div data-tour="wallet">
+          <WalletConnect />
+        </div>
       </div>
     </header>
   );

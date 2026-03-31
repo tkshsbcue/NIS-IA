@@ -37,7 +37,7 @@ export function Console() {
   }, [consoleMessages.length]);
 
   return (
-    <div className="flex flex-1 flex-col overflow-hidden">
+    <div data-tour="console" className="flex flex-1 flex-col overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between border-b border-border bg-bg-secondary px-3 py-2">
         <div className="flex items-center gap-2 text-text-muted">

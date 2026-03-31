@@ -20,10 +20,10 @@ function App() {
         <SplitLayout
           left={
             <Tabs defaultTab="editor" className="flex flex-1 flex-col overflow-hidden">
-              <TabList>
-                <Tab value="editor">Editor</Tab>
-                <Tab value="challenge">Challenge</Tab>
-                <Tab value="leaderboard">Leaderboard</Tab>
+              <TabList data-tour="left-tabs">
+                <Tab value="editor" data-tour="editor-tab">Editor</Tab>
+                <Tab value="challenge" data-tour="challenge-tab">Challenge</Tab>
+                <Tab value="leaderboard" data-tour="leaderboard-tab">Leaderboard</Tab>
               </TabList>
               <TabPanel value="editor" className="flex flex-1 flex-col">
                 <CodeEditor />
@@ -38,10 +38,10 @@ function App() {
           }
           right={
             <Tabs defaultTab="console" className="flex flex-1 flex-col overflow-hidden">
-              <TabList>
-                <Tab value="console">Console</Tab>
-                <Tab value="attack">Attack Dashboard</Tab>
-                <Tab value="insights">Insights</Tab>
+              <TabList data-tour="right-tabs">
+                <Tab value="console" data-tour="console-tab">Console</Tab>
+                <Tab value="attack" data-tour="attack-tab">Attack Dashboard</Tab>
+                <Tab value="insights" data-tour="insights-tab">Insights</Tab>
               </TabList>
               <TabPanel value="console" className="flex flex-1 flex-col">
                 <Console />

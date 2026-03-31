@@ -93,7 +93,7 @@ export function ChallengePanel() {
       </Card>
 
       {/* Hints */}
-      <Card className="mb-4">
+      <Card data-tour="hints" className="mb-4">
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle className="text-sm">Hints</CardTitle>
@@ -127,7 +127,7 @@ export function ChallengePanel() {
       </Card>
 
       {/* Solution Toggle */}
-      <Card className="mb-4">
+      <Card data-tour="solution-toggle" className="mb-4">
         <button
           onClick={toggleSolution}
           className="flex w-full items-center justify-between p-4 text-left cursor-pointer"
